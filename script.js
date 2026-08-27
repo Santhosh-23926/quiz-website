@@ -38,7 +38,7 @@ let quiz = {
         answer: "All"
     },
     question8: {
-        question: "Who is Santhosh?",
+        question: "Who is Santhosh?😊😊",
         options: [
             "😊 Good Guy",
             "😎 Very Good Guy",
