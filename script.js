@@ -1,37 +1,75 @@
 let quiz = {
 
-    quation1: {
-        quation: "What is current year?",
-        option: ["2026", "2025", "2024", "2022"],
-        answer: "2026"
+    question1: {
+        question: "avinash lover name?",
+        options: ["bantu", "saipallavi", "narsapur", "all"],
+        answer: "all"
     },
 
-    quation2: {
-        quation: "What is our Telangana CM name in 2026?",
-        option: ["KCR", "Rahul Gandhi", "Revanth Reddy", "Malanna"],
-        answer: "Revanth Reddy"
+    question2: {
+        question: "tell me about avinash behaviour?",
+        options: ["good", "funny", "friendly", "rude"],
+        answer: "friendly"
     },
 
-    quation3: {
-        quation: "What is the capital of Telangana?",
-        option: ["Hyd", "Mhbd", "Kmm", "None"],
-        answer: "Hyd"
-    }
-};
+    question3: {
+        question: "who is our guruji?",
+        options : ["sathish", "avinash", "sanjay", "satish and avinash"],
+        answer: "satish and avinash"
+    },
+    question4: {
+        question: "😊When we hear Satish's name, what comes to our mind😊?",
+        options: ["😊 Smiley Face", "😍 Lover Boy", "😡 Angry Face", "😄 All"],
+        answer: "😄 All"
+    },
+    question5: {
+        question: "Who is Sanjay?",
+        options: ["Don", "Singer", "Smart Boy", "Lover Boy"],
+        answer: "Don"
+    },
+    question6: {
+        question: "How would you describe Vamshi?",
+        options: ["loverboy", "Smart", "Hardworking", "All"],
+        answer: "Hardworking"
+    },
+    question7: {
+        question: "Sathwik lover name?",
+        options: ["Gudal", "Nilu", "Unknown", "All"],
+        answer: "All"
+    },
+    question8: {
+        question: "Who is Santhosh?",
+        options: [
+            "😊 Good Guy",
+            "😎 Very Good Guy",
+            "🤝 Loyal Boy",
+            "🎉 All"
+        ],
+    answer: "🎉 All"
+},
+
+}
+
+
 let questions = [
-    quiz.quation1,
-    quiz.quation2,
-    quiz.quation3
+    quiz.question1,
+    quiz.question2,
+    quiz.question3,
+    quiz.question4,
+    quiz.question5,
+    quiz.question6,
+    quiz.question7,
+    quiz.question8
 ];
 let cur_index = 0;
-let cur_quation = questions[cur_index];
+let cur_question = questions[cur_index];
 let score = 0;
 let answered = false;
 function santhosh() {
     document.getElementById("demo").innerHTML =
-        cur_quation.quation;
+        cur_question.question;
     let cur_option = "";
-    cur_quation.option.forEach(q => {
+    cur_question.options.forEach(q => {
         cur_option += `
             <div>
                 <input
@@ -60,7 +98,7 @@ function selected() {
         alert("Please select an option");
         return;
     }
-    if (selectedOption.value === cur_quation.answer) {
+    if (selectedOption.value === cur_question .answer) {
         score++;
         alert("Correct Answer!");
     } else {
@@ -73,7 +111,7 @@ function selected() {
 function nextQuestion() {
     if (cur_index < questions.length - 1) {
         cur_index++;
-        cur_quation = questions[cur_index];
+        cur_question = questions[cur_index];
         answered = false;
         santhosh();
     } else {
